@@ -1,10 +1,22 @@
 package com.example.Dear.comrade.Project.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Laptop {
+
+    @Id
+    @GeneratedValue
+    Long id;
 
     String brand;
     int ram;
     double price;
+
+    public Laptop() {
+    }
 
     public Laptop(String brand, int ram, double price) {
         this.brand = brand;
